@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kristi L. Dillon — Customer Success &amp; Dental AI</title>
+<meta name="description" content="Kristi L. Dillon, BS, RDH — Customer Success &amp; Account Management leader in dental AI and DSO. Registered Dental Hygienist turned top-ranked commercial operator." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#F4F7F7; --surface:#FFFFFF; --ink:#11333D; --ink-soft:#4D656C;
+    --brand:#0F4C5C; --accent:#13959E; --line:#D6E2E3; --tint:#E7F1F1; --dark:#0C2A32;
+    --shadow:0 1px 2px rgba(12,42,50,.04),0 8px 24px rgba(12,42,50,.06);
+    --maxw:1080px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Inter",system-ui,-apple-system,sans-serif;
+    font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  .mono{font-family:"IBM Plex Mono",monospace}
+  .eyebrow{
+    font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--accent);font-weight:500;
+  }
+  h1,h2,h3{font-family:"Space Grotesk",sans-serif;margin:0;letter-spacing:-.02em;color:var(--ink)}
+  .skip{position:absolute;left:-999px;top:0}
+  .skip:focus{left:12px;top:12px;background:var(--brand);color:#fff;padding:10px 14px;border-radius:8px;z-index:200}
+
+  /* ---------- nav ---------- */
+  nav{
+    position:sticky;top:0;z-index:100;
+    background:rgba(244,247,247,.82);backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .brandmark{display:flex;align-items:center;gap:11px;font-family:"Space Grotesk";font-weight:700;letter-spacing:-.01em}
+  .monogram{
+    width:34px;height:34px;border-radius:8px;background:var(--brand);color:#fff;
+    display:grid;place-items:center;font-size:14px;font-family:"Space Grotesk";font-weight:700;letter-spacing:.02em;
+  }
+  .nav-links{display:flex;align-items:center;gap:28px}
+  .nav-links a{font-size:14px;color:var(--ink-soft);font-weight:500;transition:color .2s}
+  .nav-links a:hover{color:var(--brand)}
+  .nav-cta{
+    font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:.04em;
+    border:1px solid var(--brand);color:var(--brand);padding:8px 14px;border-radius:999px;transition:.2s;
+  }
+  .nav-cta:hover{background:var(--brand);color:#fff}
+  .nav-toggle{display:none}
+
+  /* ---------- hero ---------- */
+  header.hero{position:relative;overflow:hidden;padding:84px 0 64px}
+  .hero::before{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:repeating-linear-gradient(90deg,var(--brand) 0 1px,transparent 1px 26px);
+    opacity:.035;
+  }
+  .hero-grid{position:relative;display:grid;grid-template-columns:1.55fr 1fr;gap:54px;align-items:center}
+  .hero h1{font-weight:700;font-size:clamp(2.7rem,6.6vw,5rem);line-height:1.02;margin:18px 0 0}
+  .hero h1 .dot{color:var(--accent)}
+  .hero p.lead{margin:22px 0 0;font-size:1.12rem;color:var(--ink-soft);max-width:54ch}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;
+    padding:13px 22px;border-radius:11px;transition:.2s;border:1px solid transparent;
+  }
+  .btn-primary{background:var(--brand);color:#fff}
+  .btn-primary:hover{background:#0a3b48;transform:translateY(-1px)}
+  .btn-ghost{border-color:var(--line);background:var(--surface);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+  .btn svg{width:16px;height:16px}
+  .availability{
+    display:inline-flex;align-items:center;gap:9px;font-family:"IBM Plex Mono",monospace;
+    font-size:12.5px;letter-spacing:.05em;color:var(--ink-soft);
+  }
+  .pulse{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 rgba(19,149,158,.5);animation:pulse 2.4s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(19,149,158,.45)}70%{box-shadow:0 0 0 9px rgba(19,149,158,0)}100%{box-shadow:0 0 0 0 rgba(19,149,158,0)}}
+
+  /* hero portrait card */
+  .id-card{
+    background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:var(--shadow);
+  }
+  .id-card .label{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+  .id-card .name{font-family:"Space Grotesk";font-weight:700;font-size:1.5rem;margin-top:6px;line-height:1.1}
+  .id-card .role{color:var(--ink-soft);font-size:.95rem;margin-top:4px}
+  .id-rule{height:1px;background:var(--line);margin:18px 0}
+  .id-row{display:flex;justify-content:space-between;gap:14px;font-size:.9rem;margin:9px 0}
+  .id-row span:first-child{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);padding-top:2px}
+  .id-row span:last-child{text-align:right;font-weight:500}
+
+  /* ---------- stats readout ---------- */
+  .readout{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface)}
+  .readout-grid{display:grid;grid-template-columns:repeat(5,1fr)}
+  .stat{padding:26px 22px;border-left:1px solid var(--line)}
+  .stat:first-child{border-left:none}
+  .stat .num{font-family:"Space Grotesk";font-weight:700;font-size:1.9rem;color:var(--brand);letter-spacing:-.02em}
+  .stat .cap{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-top:7px;line-height:1.45}
+
+  /* ---------- section ---------- */
+  section{padding:78px 0}
+  .sec-head{max-width:62ch;margin-bottom:40px}
+  .sec-head h2{font-size:clamp(1.7rem,3.6vw,2.5rem);font-weight:600;margin-top:12px;line-height:1.12}
+
+  /* about */
+  .about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:start}
+  .about-body p{color:var(--ink-soft);margin:0 0 18px}
+  .about-body strong{color:var(--ink);font-weight:600}
+  .cred{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:var(--shadow)}
+  .cred-block{margin-bottom:18px}
+  .cred-block:last-child{margin-bottom:0}
+  .cred-block .k{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);margin-bottom:7px}
+  .cred-block .v{font-size:.93rem;color:var(--ink)}
+  .cred-block .v span{color:var(--ink-soft)}
+
+  /* timeline */
+  .tl{position:relative;margin-left:8px;padding-left:34px}
+  .tl::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--line)}
+  .tl-item{position:relative;padding-bottom:40px}
+  .tl-item:last-child{padding-bottom:0}
+  .tl-item::before{content:"";position:absolute;left:-34px;top:5px;width:14px;height:14px;border-radius:50%;background:var(--surface);border:3px solid var(--brand)}
+  .tl-item.cur::before{background:var(--accent);border-color:var(--accent);box-shadow:0 0 0 5px rgba(19,149,158,.15)}
+  .tl-date{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.04em;color:var(--accent)}
+  .tl-role{font-family:"Space Grotesk";font-weight:600;font-size:1.18rem;margin:5px 0 2px}
+  .tl-co{color:var(--ink-soft);font-size:.95rem;margin-bottom:10px}
+  .tl-desc{color:var(--ink-soft);font-size:.97rem;max-width:60ch}
+  .tl-desc b{color:var(--ink);font-weight:600}
+
+  /* strengths */
+  .alt{background:var(--tint)}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{
+    background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px 22px;
+    border-left:3px solid var(--line);transition:.22s;
+  }
+  .card:hover{border-left-color:var(--accent);transform:translateY(-3px);box-shadow:var(--shadow)}
+  .card h3{font-size:1.06rem;font-weight:600;margin-bottom:8px}
+  .card p{margin:0;color:var(--ink-soft);font-size:.93rem}
+  .card .ix{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--accent);letter-spacing:.1em}
+
+  /* contact band */
+  .contact{background:var(--dark);color:#EAF3F3;position:relative;overflow:hidden}
+  .contact::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,#fff 0 1px,transparent 1px 26px);opacity:.04}
+  .contact .wrap{position:relative}
+  .contact h2{color:#fff;font-size:clamp(2rem,5vw,3.2rem);font-weight:700}
+  .contact p{color:#A9C6CA;max-width:52ch;margin:16px 0 0}
+  .contact .cta-row{margin-top:30px}
+  .btn-light{background:#fff;color:var(--dark)}
+  .btn-light:hover{background:#DDEDED;transform:translateY(-1px)}
+  .btn-outline{border-color:rgba(255,255,255,.28);color:#fff}
+  .btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+  .contact-meta{display:flex;flex-wrap:wrap;gap:26px;margin-top:34px;font-family:"IBM Plex Mono",monospace;font-size:13px;color:#9FBFC3}
+  .contact-meta a:hover{color:#fff}
+
+  footer{padding:30px 0;border-top:1px solid rgba(255,255,255,.08);background:var(--dark)}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:"IBM Plex Mono",monospace;font-size:12px;color:#7FA3A8}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  :focus-visible{outline:2.5px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+  /* responsive */
+  @media(max-width:880px){
+    .hero-grid{grid-template-columns:1fr;gap:34px}
+    .id-card{order:-1}
+    .about-grid{grid-template-columns:1fr;gap:30px}
+    .grid3{grid-template-columns:1fr 1fr}
+    .readout-grid{grid-template-columns:repeat(2,1fr)}
+    .stat:nth-child(odd){border-left:none}
+    .stat{border-top:1px solid var(--line)}
+    .stat:first-child,.stat:nth-child(2){border-top:none}
+  }
+  @media(max-width:560px){
+    .nav-links{display:none}
+    .grid3{grid-template-columns:1fr}
+    .readout-grid{grid-template-columns:1fr 1fr}
+    section{padding:60px 0}
+    .hero{padding:54px 0 48px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    .pulse{animation:none}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+<a href="#about" class="skip">Skip to content</a>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a href="#top" class="brandmark"><span class="monogram">KD</span>Kristi&nbsp;Dillon</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#strengths">What I do</a>
+      <a href="#contact">Contact</a>
+      <a href="Kristi-Dillon-Resume.pdf" class="nav-cta" download>Résumé ↓</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow reveal">Customer Success · Account Management · Dental AI / DSO</div>
+      <h1 class="reveal" style="transition-delay:.08s">Both sides of the operatory<span class="dot">.</span></h1>
+      <p class="lead reveal" style="transition-delay:.16s">I'm the clinician who became the operator. Twelve years chairside as a Registered Dental Hygienist, then the rep who moved 300+ practices onto digital and AI-enabled workflows. Now I build and lead customer success across the dental SMB and DSO market — onboarding, retention, and expansion.</p>
+      <div class="cta-row reveal" style="transition-delay:.24s">
+        <a class="btn btn-primary" href="mailto:kristi.dillon@me.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          Email me
+        </a>
+        <a class="btn btn-ghost" href="Kristi-Dillon-Resume.pdf" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg>
+          Download résumé
+        </a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/kdillon5mm" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0ZM.25 8.25h4.5V24H.25ZM8 8.25h4.31v2.15h.06c.6-1.14 2.07-2.34 4.26-2.34 4.56 0 5.4 3 5.4 6.9V24h-4.5v-6.94c0-1.65-.03-3.78-2.3-3.78-2.3 0-2.66 1.8-2.66 3.66V24H8Z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+      <div class="availability reveal" style="transition-delay:.32s;margin-top:26px">
+        <span class="pulse"></span> Open to senior Customer Success &amp; Account leadership roles
+      </div>
+    </div>
+
+    <aside class="id-card reveal" style="transition-delay:.2s" aria-label="Profile card">
+      <div class="label">Profile</div>
+      <div class="name">Kristi L. Dillon</div>
+      <div class="role">BS, RDH · Brooklyn, NY</div>
+      <div class="id-rule"></div>
+      <div class="id-row"><span>Focus</span><span>CS · DSO · Dental AI</span></div>
+      <div class="id-row"><span>Rank</span><span>Top 10 of ~70 reps</span></div>
+      <div class="id-row"><span>Tenure</span><span>12+ yrs in dentistry</span></div>
+      <div class="id-row"><span>Markets</span><span>NYC · Long Island · NJ</span></div>
+      <div class="id-rule"></div>
+      <div class="id-row"><span>Certs</span><span>Google AI · IBM AI</span></div>
+    </aside>
+  </div>
+</header>
+
+<div class="readout">
+  <div class="wrap"><div class="readout-grid">
+    <div class="stat reveal"><div class="num">Top&nbsp;10</div><div class="cap">National rep ranking, ~70 field reps</div></div>
+    <div class="stat reveal" style="transition-delay:.06s"><div class="num">12+&nbsp;yrs</div><div class="cap">Clinical dentistry &amp; dental sales</div></div>
+    <div class="stat reveal" style="transition-delay:.12s"><div class="num">300+</div><div class="cap">Practices onboarded to digital / AI</div></div>
+    <div class="stat reveal" style="transition-delay:.18s"><div class="num">5×</div><div class="cap">YoY account growth, key accounts</div></div>
+    <div class="stat reveal" style="transition-delay:.24s"><div class="num">~20%</div><div class="cap">Average attainment over quota</div></div>
+  </div></div>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-body reveal">
+        <div class="eyebrow">The short version</div>
+        <h2 style="font-family:'Space Grotesk';font-weight:600;font-size:clamp(1.7rem,3.6vw,2.4rem);margin:12px 0 22px;line-height:1.12">Customer success, learned from inside the chair.</h2>
+        <p>I started in the operatory. As a Registered Dental Hygienist in high-volume Brooklyn and Staten Island practices, I learned exactly how a dental office runs — <strong>what makes a clinician trust a new tool, and what makes them quietly abandon it.</strong></p>
+        <p>Then I took that fluency into the field. At <strong>Align Technology</strong> I converted 300+ practices to digital scanning workflows. At <strong>OraPharma (Bausch Health)</strong> I rank in the top 10 of ~70 reps nationally — growing my territory roughly 10% a quarter while protecting the accounts I've already won. And I founded <strong>GetDented</strong> to prove I can build a customer motion from a blank page.</p>
+        <p>The thread through all of it is the same: turn a signed contract into a practice that can't imagine working without you. That's customer success — and I've been doing it in the field for over a decade.</p>
+      </div>
+      <div class="cred reveal" style="transition-delay:.1s">
+        <div class="cred-block"><div class="k">Clinical</div><div class="v">Registered Dental Hygienist (NY)<br><span>Local Anesthesia &amp; Nitrous Oxide · Diode Laser</span></div></div>
+        <div class="cred-block"><div class="k">AI &amp; Data</div><div class="v">Google AI Essentials<br>IBM AI Fundamentals</div></div>
+        <div class="cred-block"><div class="k">Tools</div><div class="v">Salesforce &amp; CRM · iTero / 3Shape / Medit<br><span>Customer health scoring &amp; reporting</span></div></div>
+        <div class="cred-block"><div class="k">Education</div><div class="v">A.A.S. Dental Hygiene — NYU, 2014<br><span>B.S. Psychology / Sociology — CSI, 2011</span></div></div>
+        <div class="cred-block"><div class="k">Languages</div><div class="v">English <span>native</span> · Spanish <span>conversational</span> · Russian <span>beginner</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" style="padding-top:24px">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Track record</div>
+      <h2>Where I've built, sold, and kept customers.</h2>
+    </div>
+    <div class="tl">
+      <div class="tl-item cur reveal">
+        <div class="tl-date">2024 — Present</div>
+        <div class="tl-role">Territory Manager &amp; Clinical Sales Consultant</div>
+        <div class="tl-co">OraPharma (Bausch Health) · Brooklyn &amp; Staten Island</div>
+        <div class="tl-desc">Ranked <b>Top 10 of ~70 reps nationally</b> with ~10% quarter-over-quarter net expansion. Own the full post-sale lifecycle across DSO/group and independent accounts — onboarding, adoption, retention, and expansion — and flag at-risk accounts early.</div>
+      </div>
+      <div class="tl-item cur reveal" style="transition-delay:.06s">
+        <div class="tl-date">2025 — Present</div>
+        <div class="tl-role">Founder</div>
+        <div class="tl-co">GetDented · Vinci &amp; Loyola LLC · Brooklyn, NY</div>
+        <div class="tl-desc">Built a dental membership platform from zero — defined <b>ICP, GTM, pricing, and the full customer lifecycle</b>; signed founding-provider LOIs across six practices at near-zero CAC.</div>
+      </div>
+      <div class="tl-item reveal" style="transition-delay:.12s">
+        <div class="tl-date">2022 — 2024</div>
+        <div class="tl-role">Clinical Consultant / Digital Adoption Territory Manager</div>
+        <div class="tl-co">Align Technology · Invisalign / iTero · NYC Metro</div>
+        <div class="tl-desc">Built and managed a <b>300+ practice portfolio</b>; drove <b>5× YoY production growth</b> in key accounts and led adoption and change management across DSOs and PE-backed groups.</div>
+      </div>
+      <div class="tl-item reveal" style="transition-delay:.18s">
+        <div class="tl-date">2014 — 2022</div>
+        <div class="tl-role">Registered Dental Hygienist</div>
+        <div class="tl-co">Bococa Dental · Park Slope Dental Arts · Marine Dental</div>
+        <div class="tl-desc">Full-scope periodontal therapy in high-volume practices; grew practice revenue <b>~30%</b> through structured case presentation. The chairside fluency behind everything since.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="strengths" class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">What I do</div>
+      <h2>The customer success motion, end to end.</h2>
+    </div>
+    <div class="grid3">
+      <div class="card reveal"><h3>Retention &amp; NRR</h3><p>Protect the book and grow it. Spot at-risk accounts before they churn and turn renewals into expansion.</p></div>
+      <div class="card reveal" style="transition-delay:.05s"><h3>Onboarding &amp; Adoption</h3><p>Drive time-to-value from the first order forward, so a new tool becomes daily habit in the operatory.</p></div>
+      <div class="card reveal" style="transition-delay:.1s"><h3>Expansion &amp; Upsell</h3><p>Deepen revenue inside signed accounts and map the path from a single practice to a multi-location group.</p></div>
+      <div class="card reveal" style="transition-delay:.05s"><h3>Team Building &amp; Enablement</h3><p>Stand up a CS function from a blank page, write the playbook, and lead a team to retention and growth targets.</p></div>
+      <div class="card reveal" style="transition-delay:.1s"><h3>Dental &amp; DSO Fluency</h3><p>I've run a practice and sold to hundreds. I speak clinician, office manager, and C-suite in the same meeting.</p></div>
+      <div class="card reveal" style="transition-delay:.15s"><h3>AI-Enabled Workflows</h3><p>Certified in applied AI and already building it into how I sell, consult, and read customer health signals.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact" style="padding:88px 0">
+  <div class="wrap">
+    <div class="eyebrow reveal">Let's talk</div>
+    <h2 class="reveal" style="transition-delay:.06s;margin-top:12px">Looking for someone who already knows the customer.</h2>
+    <p class="reveal" style="transition-delay:.12s">I'm exploring senior customer success and account leadership roles in dental technology and AI. If that's the person you're hiring, I'd love to talk.</p>
+    <div class="cta-row reveal" style="transition-delay:.18s">
+      <a class="btn btn-light" href="mailto:kristi.dillon@me.com">Email me</a>
+      <a class="btn btn-outline" href="Kristi-Dillon-Resume.pdf" download>Download résumé</a>
+    </div>
+    <div class="contact-meta reveal" style="transition-delay:.24s">
+      <a href="mailto:kristi.dillon@me.com">kristi.dillon@me.com</a>
+      <a href="tel:+16464238981">646·423·8981</a>
+      <a href="https://www.linkedin.com/in/kdillon5mm" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <span>Brooklyn, NY</span>
+    </div>
+  </div>
+  <footer>
+    <div class="wrap">
+      <span>© 2026 Kristi L. Dillon, BS, RDH</span>
+      <span>Built in Brooklyn</span>
+    </div>
+  </footer>
+</section>
+
+<script>
+  (function(){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold:.12, rootMargin:"0px 0px -40px 0px"});
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  })();
+</script>
+</body>
+</html>
